@@ -1,0 +1,20 @@
+* python3 -m venv env
+* source env/bin/activate
+* pip3 freeze > requirements.txt
+* pip3 install django
+* python3 manage.py createsuperuser
+* django-admin startproject premiosplatziapp
+* python3 manage.py runserver
+* python3 manage.py startapp polls
+* python3 manage.py makemigrations polls
+* python3 manage.py migrate
+* python3 manage.py shell
+    ** from polls.models import Question, Choice
+    ** from django.utils import timezone
+    ** q = Question(question_text="¿Cual es el mejor curso de Platzi?", pub_date=timezone.now())
+    ** q.save()
+    ** q
+    ** q.pub_date
+    ** Question.objects.all()
+* python3 manage.py createsuperuser
+    **http://127.0.0.1:8000/admin/login/?next=/admin/
