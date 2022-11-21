@@ -3,7 +3,15 @@
 * source env/bin/activate
 * pip3 install django
 * django-admin startproject mysite .
+* python3 manage.py createsuperuser
 * python3 manage.py runserver
 * python3 manage.py startapp myapp
 * python3 manage.py makemigrations
 * python3 manage.py migrate
+* sqlitebrowser
+* python3 manage.py shell
+    * from myapp.models import Project, Task
+    * p = Project(name="aplicacion movil")
+    * p = Project(name="aplicacion web usando Django")
+    * Project.objects.all()
+    * Project.objects.get(id=1)
